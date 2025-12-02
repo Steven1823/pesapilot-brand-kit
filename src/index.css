@@ -2,81 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* PesaPilot Design System - Crypto-forward, Trust-first */
+/* PesaPilot Design System - Crypto-Tech Neon Theme */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* PesaPilot Color Palette */
-    --background: 217 60% 8%; /* Deep midnight #0B1221 */
-    --foreground: 200 33% 93%; /* Near-white #E6EEF3 */
+    /* PesaPilot Neon Blue/Purple Color Palette */
+    --background: 240 20% 4%; /* Deep space black #0A0A10 */
+    --foreground: 220 30% 95%; /* Near-white #F0F4FA */
 
-    --card: 217 44% 10%; /* Charcoal surface #0F1724 */
-    --card-foreground: 200 33% 93%;
+    --card: 240 25% 8%; /* Dark surface #111118 */
+    --card-foreground: 220 30% 95%;
 
-    --popover: 217 44% 12%;
-    --popover-foreground: 200 33% 93%;
+    --popover: 240 25% 10%;
+    --popover-foreground: 220 30% 95%;
 
-    --primary: 170 100% 37%; /* Emerald teal #00BFA6 */
-    --primary-foreground: 217 60% 8%;
+    --primary: 220 100% 60%; /* Neon blue #3366FF */
+    --primary-foreground: 220 30% 98%;
 
-    --secondary: 217 44% 15%;
-    --secondary-foreground: 200 33% 93%;
+    --secondary: 260 70% 55%; /* Electric purple #7C3AED */
+    --secondary-foreground: 220 30% 98%;
 
-    --muted: 217 30% 20%;
-    --muted-foreground: 200 20% 60%;
+    --muted: 240 20% 15%;
+    --muted-foreground: 220 15% 55%;
 
-    --accent: 42 100% 67%; /* Neon gold #FFC857 */
-    --accent-foreground: 217 60% 8%;
+    --accent: 280 100% 65%; /* Neon purple #B366FF */
+    --accent-foreground: 220 30% 98%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --success: 152 69% 45%;
+    --success: 160 84% 45%; /* Cyan-teal #12D9A0 */
     --success-foreground: 0 0% 100%;
 
-    --warning: 38 92% 50%;
-    --warning-foreground: 217 60% 8%;
+    --warning: 38 100% 55%; /* Orange-gold #FF9F1C */
+    --warning-foreground: 240 20% 8%;
 
-    --border: 217 30% 18%;
-    --input: 217 30% 18%;
-    --ring: 170 100% 37%;
+    --border: 240 20% 18%;
+    --input: 240 20% 15%;
+    --ring: 220 100% 60%;
 
     --radius: 1rem;
 
-    /* Custom tokens */
-    --surface-elevated: 217 44% 13%;
-    --glow-primary: 170 100% 37%;
-    --glow-accent: 42 100% 67%;
-    --text-dim: 200 15% 50%;
+    /* Custom neon tokens */
+    --neon-blue: 220 100% 60%;
+    --neon-purple: 280 100% 65%;
+    --neon-cyan: 185 100% 50%;
+    --neon-pink: 330 100% 60%;
+    --surface-elevated: 240 25% 11%;
+    --glow-primary: 220 100% 60%;
+    --glow-secondary: 260 70% 55%;
+    --glow-accent: 280 100% 65%;
+    --text-dim: 220 15% 45%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(170 100% 37%), hsl(170 80% 45%));
-    --gradient-accent: linear-gradient(135deg, hsl(42 100% 67%), hsl(38 92% 50%));
-    --gradient-surface: linear-gradient(180deg, hsl(217 44% 12%), hsl(217 44% 8%));
-    --gradient-card: linear-gradient(135deg, hsl(217 44% 14%), hsl(217 44% 10%));
-    --gradient-hero: linear-gradient(180deg, hsl(217 60% 12%) 0%, hsl(217 60% 6%) 100%);
+    /* Crypto-tech Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 100% 60%), hsl(260 70% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(280 100% 65%), hsl(330 100% 60%));
+    --gradient-cyber: linear-gradient(135deg, hsl(185 100% 50%), hsl(220 100% 60%));
+    --gradient-surface: linear-gradient(180deg, hsl(240 25% 10%), hsl(240 25% 6%));
+    --gradient-card: linear-gradient(135deg, hsl(240 25% 12%) 0%, hsl(260 30% 10%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(240 20% 8%) 0%, hsl(260 25% 5%) 100%);
+    --gradient-mesh: radial-gradient(ellipse at 20% 30%, hsl(220 100% 60% / 0.15) 0%, transparent 50%),
+                     radial-gradient(ellipse at 80% 70%, hsl(280 100% 65% / 0.1) 0%, transparent 50%);
 
-    /* Shadows */
-    --shadow-glow: 0 0 30px hsl(170 100% 37% / 0.3);
-    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
-    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.5);
+    /* Neon Shadows */
+    --shadow-glow: 0 0 30px hsl(220 100% 60% / 0.4);
+    --shadow-glow-purple: 0 0 30px hsl(280 100% 65% / 0.4);
+    --shadow-glow-cyan: 0 0 30px hsl(185 100% 50% / 0.4);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.5);
+    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.6);
 
     /* Sidebar (keeping for compatibility) */
-    --sidebar-background: 217 44% 10%;
-    --sidebar-foreground: 200 33% 93%;
-    --sidebar-primary: 170 100% 37%;
-    --sidebar-primary-foreground: 217 60% 8%;
-    --sidebar-accent: 217 44% 15%;
-    --sidebar-accent-foreground: 200 33% 93%;
-    --sidebar-border: 217 30% 18%;
-    --sidebar-ring: 170 100% 37%;
+    --sidebar-background: 240 25% 8%;
+    --sidebar-foreground: 220 30% 95%;
+    --sidebar-primary: 220 100% 60%;
+    --sidebar-primary-foreground: 220 30% 98%;
+    --sidebar-accent: 240 25% 12%;
+    --sidebar-accent-foreground: 220 30% 95%;
+    --sidebar-border: 240 20% 18%;
+    --sidebar-ring: 220 100% 60%;
   }
 
-  /* Dark mode is our default for crypto aesthetic */
   .dark {
-    --background: 217 60% 8%;
-    --foreground: 200 33% 93%;
+    --background: 240 20% 4%;
+    --foreground: 220 30% 95%;
   }
 }
 
@@ -99,16 +108,35 @@
 @layer components {
   /* Glass effect for cards */
   .glass {
-    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+    @apply bg-card/60 backdrop-blur-xl border border-border/30;
   }
 
-  /* Glow effects */
+  /* Neon glow effects */
   .glow-primary {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--primary) / 0.2);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.25);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px hsl(var(--secondary) / 0.5), 0 0 40px hsl(var(--secondary) / 0.25);
   }
 
   .glow-accent {
-    box-shadow: 0 0 20px hsl(var(--accent) / 0.4), 0 0 40px hsl(var(--accent) / 0.2);
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.5), 0 0 40px hsl(var(--accent) / 0.25);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(var(--neon-cyan) / 0.5), 0 0 40px hsl(var(--neon-cyan) / 0.25);
+  }
+
+  /* Neon border glow */
+  .neon-border {
+    @apply border border-primary/50;
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.3), inset 0 0 15px hsl(var(--primary) / 0.1);
+  }
+
+  .neon-border-purple {
+    @apply border border-secondary/50;
+    box-shadow: 0 0 15px hsl(var(--secondary) / 0.3), inset 0 0 15px hsl(var(--secondary) / 0.1);
   }
 
   /* Safe zone indicator */
@@ -138,19 +166,54 @@
   .animated-gradient {
     background: linear-gradient(
       -45deg,
-      hsl(217 60% 8%),
-      hsl(217 44% 12%),
-      hsl(217 60% 10%),
-      hsl(217 44% 8%)
+      hsl(240 20% 4%),
+      hsl(260 25% 8%),
+      hsl(220 30% 8%),
+      hsl(240 20% 6%)
     );
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
+  }
+
+  /* Mesh gradient overlay */
+  .mesh-overlay {
+    position: relative;
+  }
+  
+  .mesh-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-mesh);
+    pointer-events: none;
   }
 
   @keyframes gradient-shift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+  }
+
+  /* Pulse animation for notifications */
+  .pulse-neon {
+    animation: pulse-neon 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-neon {
+    0%, 100% { 
+      box-shadow: 0 0 10px hsl(var(--primary) / 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 25px hsl(var(--primary) / 0.7), 0 0 50px hsl(var(--primary) / 0.3);
+    }
+  }
+
+  /* Cyber grid pattern */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 
@@ -185,12 +248,17 @@
   /* Gradient text */
   .text-gradient-primary {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(170 80% 55%));
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
   }
 
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--accent)), hsl(38 100% 70%));
+    background-image: linear-gradient(135deg, hsl(var(--accent)), hsl(330 100% 60%));
+  }
+
+  .text-gradient-cyber {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--primary)));
   }
 
   /* Animation delays */
@@ -199,4 +267,17 @@
   .animation-delay-300 { animation-delay: 300ms; }
   .animation-delay-400 { animation-delay: 400ms; }
   .animation-delay-500 { animation-delay: 500ms; }
+
+  /* Tap/hover animations */
+  .tap-scale {
+    @apply transition-transform duration-150 active:scale-95;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
 }
