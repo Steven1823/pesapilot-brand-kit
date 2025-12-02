@@ -114,7 +114,7 @@ export const SettingsScreen = ({ onNavigate }: SettingsScreenProps) => {
         </div>
 
         {/* Bottom Navigation */}
-        <BottomNav activeTab="settings" />
+        <BottomNav activeTab="home" onTabChange={(tab) => onNavigate?.(tab)} />
       </div>
     </MobileFrame>
   );

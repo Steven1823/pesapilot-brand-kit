@@ -19,7 +19,7 @@ interface HomeScreenProps {
 }
 
 export const HomeScreen = ({ onNavigate }: HomeScreenProps) => {
-  const [activeTab, setActiveTab] = useState<"home" | "history" | "explore" | "settings">("home");
+  const [activeTab, setActiveTab] = useState<"home" | "send" | "receive" | "safety" | "explore">("home");
 
   const balance = "2,450.00";
   const currency = "USD";
