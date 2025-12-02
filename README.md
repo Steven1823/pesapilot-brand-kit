@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# PesaPilot — Brand Kit
 
-## Project info
+Short description
+PesaPilot brand assets and guidelines for consistent use across products and communications.
 
-**URL**: https://lovable.dev/projects/cf082d1b-0173-4c97-8061-329682ce3c7e
+Why this repo
+- Centralized place for logos, colors, typography and usage rules.
+- Helps designers and developers keep the brand consistent.
 
-## How can I edit this code?
+Contents
+- /logos — SVG, PNG and usage variations (full, mark-only, reversed)
+- /colors — color palette files and hex/RGB values
+- /typography — font files and recommended sizes/weights
+- /icons — brand icon set
+- /examples — mockups and sample layouts
+- README.md — this file
 
-There are several ways of editing your application.
+Quick usage guide
+- Logo: use the correct version for background contrast; preserve clear space equal to the height of the mark.
+- Colors: use primary palette for core branding; use secondary palette for accents only.
+- Typography: use listed web fonts for headings and body; use specified weights for hierarchy.
+- File formats: use SVG for scalable assets; PNG for raster needs; EPS/PDF for print.
 
-**Use Lovable**
+File structure (example)
+- logos/
+  - pesa-full.svg
+  - pesa-mark.svg
+  - pesa-reverse.svg
+- colors/
+  - palette.md
+- typography/
+  - fonts/
+  - usage.md
+- icons/
+- examples/
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cf082d1b-0173-4c97-8061-329682ce3c7e) and start prompting.
+Contributing
+- Open an issue for proposed guideline changes or missing assets.
+- Submit a pull request with new assets or documentation updates; include source files and usage notes.
 
-Changes made via Lovable will be committed automatically to this repo.
+License
+- Include license file in repo root (e.g., MIT) and follow its terms when using assets.
 
-**Use your preferred IDE**
+Contact
+- For approvals or brand questions contact: brand@pesapilot.example
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/cf082d1b-0173-4c97-8061-329682ce3c7e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Notes
+- Keep usage consistent and minimal — prefer the primary assets in official contexts.
+- If in doubt, contact the brand owner before publishing new variants.
