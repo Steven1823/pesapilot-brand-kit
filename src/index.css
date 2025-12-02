@@ -2,95 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* PesaPilot Design System - Crypto-forward, Trust-first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* PesaPilot Color Palette */
+    --background: 217 60% 8%; /* Deep midnight #0B1221 */
+    --foreground: 200 33% 93%; /* Near-white #E6EEF3 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 217 44% 10%; /* Charcoal surface #0F1724 */
+    --card-foreground: 200 33% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 217 44% 12%;
+    --popover-foreground: 200 33% 93%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 170 100% 37%; /* Emerald teal #00BFA6 */
+    --primary-foreground: 217 60% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 44% 15%;
+    --secondary-foreground: 200 33% 93%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 30% 20%;
+    --muted-foreground: 200 20% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 42 100% 67%; /* Neon gold #FFC857 */
+    --accent-foreground: 217 60% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 152 69% 45%;
+    --success-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --warning: 38 92% 50%;
+    --warning-foreground: 217 60% 8%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 217 30% 18%;
+    --input: 217 30% 18%;
+    --ring: 170 100% 37%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 1rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Custom tokens */
+    --surface-elevated: 217 44% 13%;
+    --glow-primary: 170 100% 37%;
+    --glow-accent: 42 100% 67%;
+    --text-dim: 200 15% 50%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(170 100% 37%), hsl(170 80% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(42 100% 67%), hsl(38 92% 50%));
+    --gradient-surface: linear-gradient(180deg, hsl(217 44% 12%), hsl(217 44% 8%));
+    --gradient-card: linear-gradient(135deg, hsl(217 44% 14%), hsl(217 44% 10%));
+    --gradient-hero: linear-gradient(180deg, hsl(217 60% 12%) 0%, hsl(217 60% 6%) 100%);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(170 100% 37% / 0.3);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
+    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.5);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 217 44% 10%;
+    --sidebar-foreground: 200 33% 93%;
+    --sidebar-primary: 170 100% 37%;
+    --sidebar-primary-foreground: 217 60% 8%;
+    --sidebar-accent: 217 44% 15%;
+    --sidebar-accent-foreground: 200 33% 93%;
+    --sidebar-border: 217 30% 18%;
+    --sidebar-ring: 170 100% 37%;
   }
 
+  /* Dark mode is our default for crypto aesthetic */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 217 60% 8%;
+    --foreground: 200 33% 93%;
   }
 }
 
@@ -100,6 +86,117 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Glass effect for cards */
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--primary) / 0.2);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.4), 0 0 40px hsl(var(--accent) / 0.2);
+  }
+
+  /* Safe zone indicator */
+  .safe-zone {
+    @apply border-l-4 border-l-success bg-success/10;
+  }
+
+  .warning-zone {
+    @apply border-l-4 border-l-warning bg-warning/10;
+  }
+
+  .danger-zone {
+    @apply border-l-4 border-l-destructive bg-destructive/10;
+  }
+
+  /* Mobile container */
+  .mobile-container {
+    @apply max-w-[430px] mx-auto min-h-screen;
+  }
+
+  /* Screen padding */
+  .screen-padding {
+    @apply px-5 py-6;
+  }
+
+  /* Animated gradient background */
+  .animated-gradient {
+    background: linear-gradient(
+      -45deg,
+      hsl(217 60% 8%),
+      hsl(217 44% 12%),
+      hsl(217 60% 10%),
+      hsl(217 44% 8%)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+@layer utilities {
+  /* Typography utilities */
+  .text-display {
+    @apply text-3xl font-bold tracking-tight;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .text-heading {
+    @apply text-xl font-semibold tracking-tight;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .text-subheading {
+    @apply text-lg font-medium;
+  }
+
+  .text-body {
+    @apply text-base font-normal;
+  }
+
+  .text-caption {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .text-micro {
+    @apply text-xs text-muted-foreground;
+  }
+
+  /* Gradient text */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(170 80% 55%));
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--accent)), hsl(38 100% 70%));
+  }
+
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
 }
